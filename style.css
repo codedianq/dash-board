@@ -34,7 +34,8 @@ svg {
 }
 
 .menu-items svg,
-.header svg {
+.header svg,
+.project-card svg {
     height: 30px;
     width: 30px;
 }
@@ -67,8 +68,8 @@ svg {
 /* grid that will divide the 3 sections */
 .container {
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 150px 4fr;
 }
 
 /* for side bar section */
@@ -99,7 +100,7 @@ svg {
 /* for header section */
 .header {
     display: grid;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 50px 50px;
     padding: 20px 50px 0;
     box-shadow: 0 -6px 7px -7px grey inset;
 }
@@ -151,6 +152,56 @@ svg {
     cursor: pointer;
     font-weight: bold;
 }
+
+/* for main content section */
+.main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+    padding: 15px;
+}
+
+.projects {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+    background-color: #e2e8f0;
+}
+
+.project-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(350px, 1fr));
+    grid-auto-rows: 350px;
+    gap: 15px;
+}
+
+.project-card h3 {
+    margin-bottom: 15px;
+}
+
+.project-content > .project-card {
+    background-color: #f8fafc;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 5px 5px 5px #a6a7a9;
+    border-left: 10px solid #1e293b;
+}
+
+.announcements {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.trending {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
 
 
     
